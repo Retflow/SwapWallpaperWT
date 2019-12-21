@@ -7,12 +7,9 @@ Working only with WSL
 - auto-completion
 - config file
   - with path to image directory
-
-
-
-**SETUP YOUR WINDOWS TERMINAL PROFILES.JSON CONFIG:**  
-change "backgroundImage" to /path/to/your/pictures/current.jpg  
-you also might do this:   export PATH=$PATH:/mnt/c/Windows/System32
+  
+**Dependencies**  
+export PATH=$PATH:/mnt/c/Windows/System32
    
 Have fun with it!
 
