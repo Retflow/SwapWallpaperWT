@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-#Author: Retflow
 #Change Wallpaper(CWP) is a small script to change the wallpaper
 #in Windows Terminal
 
 #SETUP
-#IN YOUR WINDOWS TERMINAL PROFILES.JSON SET "backgroundImage" to /path/current.jpg
+#IN YOUR WINDOWS TERMINAL PROFILES.JSON SET "backgroundImage" to /path/1.jpg
 #CHANGE PATH VARIABLE
 
 import os
@@ -13,16 +12,16 @@ import time
 import signal
 
 #PATH TO YOUR PICTURE LIBLARY 
-#E.g: path = "/mnt/c/Users/*/Pictures/linux/"
-
-path =
+# E.g: path = "/mnt/c/Users/<USERNAME>/Pictures/linux/"
+# E.g: pathToImage = "\"backgroundImage\": \"C:\\/Users\\/<USERNAME>\\/Pictures\\/linux\\/"
+path = 
+pathToImage =
 
 def NoArgument():
     print("USAGE: cwp <arg> <...>\nHelp: -h")
 
 def showHelp():
     print("HELP:\n")
-    print("USAGE: cwp <arg> <...>\n")
     print("swap <wallpaper> - Swap current Wallpaper to another")
     print("list - List all current Wallpapers in directory\n")
 
@@ -33,19 +32,15 @@ def listWallpaper():
     #lists all files in path. 
     for name in files:
         if name.endswith('.jpg') or name.endswith('.png'):
-            showWithoutExtension = ('').join(name.split('.')[0])
-            print(showWithoutExtension)
-
+        #    showWithoutExtension = ('').join(name.split('.')[0])
+        #    print(showWithoutExtension)
+            print(name)
 def swap():
-    #It change Image Name to current. Where current is the backgoround Image Setting in Windows Terminal
-    if  os.path.exists("%s%s.jpg"%(path,sys.argv[2])) or os.path.exists("%s%s.png"%(path,sys.argv[2])):
-        #.* to change what ever extension it is to jpg. 
-        os.system("cp %s%s.* %scurrent.jpg"%(path,sys.argv[2],path))
-        #start new Windows Terminal. Only then it'll change the background
-        os.system("cmd.exe /c start wt.exe")
-        #killing the proccess of the terminal. Otherwise two terminals would be running
-        #It will also kill all your backgorund proccesses. Save all your projects before running this script!
-        os.kill(os.getppid(), signal.SIGHUP)
+    #change Image Name to current. Where current is the backgoround Image Setting in Windows Terminal
+    #.* to change what ever extension it is to jpg. 
+    if  os.path.exists("%s%s"%(path,sys.argv[2])):
+        pathCompletion = pathToImage+sys.argv[2]+"\""+","
+        os.system("sed -i '37s/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/profiles.json"%pathCompletion)
     else:
         print("%s do not exists"%sys.argv[2])
 
