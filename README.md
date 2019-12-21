@@ -11,11 +11,12 @@ MyWallpaper.jpg is going to be current.jpg
 You can rename it in whatever you want.
 Your .png images will also "converted" to .jpg.   
 Everytime you change your wallpaper it also overwrites the current.jpg image.  
-As i said, it's an easy script  
+As i said, it's an easy script.
 Change it, write a whole new script, just do what you want.
 I like to share my ideas.  
 
 Have fun with it!
+
   
 **HOW TO USE IT:**  
   sudo chmod +x cwp.py  
@@ -32,4 +33,5 @@ Have fun with it!
   e.g. if you have wallpaper.png  
   write: cwp swap wallpaper
 
-  
+  ***Thanks to***  
+case_O_The_Mondays
