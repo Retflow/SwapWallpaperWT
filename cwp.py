@@ -22,6 +22,7 @@ def NoArgument():
 
 def showHelp():
     print("HELP:\n")
+    print("USAGE: cwp <arg> <...>\n")
     print("swap <wallpaper> - Swap current Wallpaper to another")
     print("list - List all current Wallpapers in directory\n")
 
