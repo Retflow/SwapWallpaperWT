@@ -6,7 +6,8 @@ Working only with WSL
 change "backgroundImage" to /path/to/your/pictures/1.jpg  
 you also might to do this:   export PATH=$PATH:/mnt/c/Windows/System32
    
-Why 1.jpg? It's because this script copy your Image to 1.jpg
+Why 1.jpg? It's because this script copy your Image to 1.jpg  
+You can rename in whatever you want.
 Even if your file is a .png.   
 Everytime you change your wallpaper it also overwrites 1.jpg.
 As i said, it's an easy script and also a bad one.
