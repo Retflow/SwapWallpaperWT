@@ -24,7 +24,7 @@ Have fun with it!
   cwp -h will show the help page
   
   just write the name without extension  
-  e.g. if you have a wallpaper.png  
+  e.g. if you have wallpaper.png  
   write: cwp swap wallpaper
 
   
