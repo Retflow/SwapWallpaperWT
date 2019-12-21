@@ -36,7 +36,7 @@ def listWallpaper():
             print(showWithoutExtension)
 
 def swap():
-    #change Image Name to 1. Where 1 is the backgoround Image Setting in Windows Terminal
+    #It change Image Name to current. Where current is the backgoround Image Setting in Windows Terminal
     #.* to change what ever extension it is to jpg. 
     if  os.path.exists("%s%s.jpg"%(path,sys.argv[2])) or os.path.exists("%s%s.png"%(path,sys.argv[2])):
         os.system("cp %s%s.* %scurrent.jpg"%(path,sys.argv[2],path))
