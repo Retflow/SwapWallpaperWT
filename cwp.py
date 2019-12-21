@@ -40,7 +40,7 @@ def swap():
         os.system("cp %s%s.* %s1.jpg"%(path,sys.argv[2],path))
         #start new Windows Terminal. Only then it'll change the background
         os.system("cmd.exe /c start wt.exe")
-        #killing the proccess the terminal. Otherwise two terminals would be running
+        #killing the proccess of the terminal. Otherwise two terminals would be running
         os.kill(os.getppid(), signal.SIGHUP)
     else:
         print("%s do not exists"%sys.argv[2])
