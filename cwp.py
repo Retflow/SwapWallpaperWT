@@ -13,7 +13,9 @@ import time
 import signal
 
 #PATH TO YOUR PICTURE LIBLARY 
-path = "/mnt/c/Users/Jakub/Pictures/linux/"
+#E.g: path = "/mnt/c/Users/*/Pictures/linux/"
+
+path =
 
 def NoArgument():
     print("USAGE: cwp <arg> <...>\nHelp: -h")
