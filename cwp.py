@@ -3,13 +3,13 @@
 #in Windows Terminal
 
 #SETUP
-#IN YOUR WINDOWS TERMINAL PROFILES.JSON SET "backgroundImage" to /path/1.jpg
 #CHANGE PATH VARIABLE
 #CHANGE PATHTOIMAGE VARIABLE
 
 #!IMPORTANT!
-#In Line 47: Change Microsoft Package Identification 
+# In Line 47: Change Microsoft Package Identification 
 # E.g: Microsoft.WindowsTerminal_7Hj8dn290kd
+# This ID can be found here: C:/Users/<USERNAME>/AppData/Local/Packages/Microsoft.WindowsTerminal_<ID>
 # Just set the WindowsTerminalID Variable
 
 import os
@@ -20,6 +20,7 @@ import signal
 #PATH TO YOUR PICTURE LIBLARY 
 # E.g: path = "/mnt/c/Users/<USERNAME>/Pictures/linux/"
 # E.g: pathToImage = "\"backgroundImage\": \"C:\\/Users\\/<USERNAME>\\/Pictures\\/linux\\/"
+
 path = ""
 pathToImage = ""
 WindowsTerminalID = ""
