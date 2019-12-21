@@ -43,6 +43,7 @@ def swap():
         #start new Windows Terminal. Only then it'll change the background
         os.system("cmd.exe /c start wt.exe")
         #killing the proccess of the terminal. Otherwise two terminals would be running
+        #It will also kill all your backgorund proccesses. Save all your projects before running this script!
         os.kill(os.getppid(), signal.SIGHUP)
     else:
         print("%s do not exists"%sys.argv[2])
