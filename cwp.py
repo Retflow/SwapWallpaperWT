@@ -5,6 +5,12 @@
 #SETUP
 #IN YOUR WINDOWS TERMINAL PROFILES.JSON SET "backgroundImage" to /path/1.jpg
 #CHANGE PATH VARIABLE
+#CHANGE PATHTOIMAGE VARIABLE
+
+#!IMPORTANT!
+#In Line 47: Change Microsoft Package Identification 
+# E.g: Microsoft.WindowsTerminal_7Hj8dn290kd
+# Just set the WindowsTerminalID Variable
 
 import os
 import sys
@@ -14,8 +20,9 @@ import signal
 #PATH TO YOUR PICTURE LIBLARY 
 # E.g: path = "/mnt/c/Users/<USERNAME>/Pictures/linux/"
 # E.g: pathToImage = "\"backgroundImage\": \"C:\\/Users\\/<USERNAME>\\/Pictures\\/linux\\/"
-path = 
-pathToImage =
+path = ""
+pathToImage = ""
+WindowsTerminalID = ""
 
 def NoArgument():
     print("USAGE: cwp <arg> <...>\nHelp: -h")
@@ -40,7 +47,7 @@ def swap():
     #.* to change what ever extension it is to jpg. 
     if  os.path.exists("%s%s"%(path,sys.argv[2])):
         pathCompletion = pathToImage+sys.argv[2]+"\""+","
-        os.system("sed -i '37s/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/profiles.json"%pathCompletion)
+        os.system("sed -i '37s/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(pathCompletion,WindowsTerminalID)
     else:
         print("%s do not exists"%sys.argv[2])
 
