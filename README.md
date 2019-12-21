@@ -2,7 +2,7 @@
 Simple Script for swapping wallpapers in Windows Terminal
 
 SETUP YOUR WINDOWS TERMINAL PROFILES.JSON CONFIG:
-  CHANGE "backgroundImage" to /path/to/your/pictures/1.jpg
+change "backgroundImage" to /path/to/your/pictures/1.jpg
    
 Why 1.jpg? It's because this script copy your Image to 1.jpg
 Even if your file is a .png.   
