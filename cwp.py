@@ -4,7 +4,7 @@
 #in Windows Terminal
 
 #SETUP
-#IN YOUR WINDOWS TERMINAL PROFILES.JSON SET "backgroundImage" to /path/1.jpg
+#IN YOUR WINDOWS TERMINAL PROFILES.JSON SET "backgroundImage" to /path/current.jpg
 #CHANGE PATH VARIABLE
 
 import os
@@ -39,7 +39,7 @@ def swap():
     #change Image Name to 1. Where 1 is the backgoround Image Setting in Windows Terminal
     #.* to change what ever extension it is to jpg. 
     if  os.path.exists("%s%s.jpg"%(path,sys.argv[2])) or os.path.exists("%s%s.png"%(path,sys.argv[2])):
-        os.system("cp %s%s.* %s1.jpg"%(path,sys.argv[2],path))
+        os.system("cp %s%s.* %scurrent.jpg"%(path,sys.argv[2],path))
         #start new Windows Terminal. Only then it'll change the background
         os.system("cmd.exe /c start wt.exe")
         #killing the proccess of the terminal. Otherwise two terminals would be running
