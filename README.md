@@ -7,8 +7,8 @@ change "backgroundImage" to /path/to/your/pictures/current.jpg
 you also might do this:   export PATH=$PATH:/mnt/c/Windows/System32
    
 Why current.jpg? It's because this script copy your Image to current.jpg  
-You can rename in whatever you want.
-Even if your file is a .png.   
+You can rename it in whatever you want.
+Your .png images will also "converted" to .jpg.   
 Everytime you change your wallpaper it also overwrites the current .jpg image.
 As i said, it's an easy script and also a bad one.
 Change it, write a whole new idea, just do what you want.
