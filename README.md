@@ -17,6 +17,7 @@ I just want to share my idea with you.
 Have fun with it!
   
 **HOW TO USE IT:**  
+  sudo chmod +x cwp.py  
   copy cwp.py to /usr/local/bin  
   USAGE:  
   cwp swap <img> will change your wallpaper  
