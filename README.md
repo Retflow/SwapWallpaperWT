@@ -4,7 +4,7 @@ Working only with WSL
 
 **SETUP YOUR WINDOWS TERMINAL PROFILES.JSON CONFIG:**  
 change "backgroundImage" to /path/to/your/pictures/current.jpg  
-you also might to do this:   export PATH=$PATH:/mnt/c/Windows/System32
+you also might do this:   export PATH=$PATH:/mnt/c/Windows/System32
    
 Why current.jpg? It's because this script copy your Image to current.jpg  
 You can rename in whatever you want.
