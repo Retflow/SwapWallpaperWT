@@ -37,8 +37,8 @@ def listWallpaper():
 
 def swap():
     #It change Image Name to current. Where current is the backgoround Image Setting in Windows Terminal
-    #.* to change what ever extension it is to jpg. 
     if  os.path.exists("%s%s.jpg"%(path,sys.argv[2])) or os.path.exists("%s%s.png"%(path,sys.argv[2])):
+        #.* to change what ever extension it is to jpg. 
         os.system("cp %s%s.* %scurrent.jpg"%(path,sys.argv[2],path))
         #start new Windows Terminal. Only then it'll change the background
         os.system("cmd.exe /c start wt.exe")
