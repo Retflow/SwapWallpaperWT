@@ -23,3 +23,8 @@ Have fun with it!
   cwp list will list all your images in your path
   cwp -h will show the help page
   
+  just write the name without extension  
+  e.g. if you have a wallpaper.png  
+  write: cwp swap wallpaper
+
+  
