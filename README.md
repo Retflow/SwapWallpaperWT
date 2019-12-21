@@ -14,9 +14,8 @@ I just want to share my idea with you.
 Have fun with it!
   
 HOW TO USE IT:
-  just copy this file to /usr/local/bin
-  then exeute cwp.
-  
+  copy cwp.py to /usr/local/bin
+  USAGE:
   cwp swap <img> will change your wallpaper
   cwp list will list all your images in your path
   cwp -h will show the help page
