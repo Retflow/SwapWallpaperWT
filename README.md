@@ -33,7 +33,7 @@ Have fun with it!
   e.g. if you have wallpaper.png  
   write: cwp swap wallpaper
 
-**For those people who like to help me**  
+**For those who like to send me feedback**  
 I'm active on Reddit(u/Qyez) just write me a message.  
 For those who do not like my script. You can also write me a message,  
 but stay decent and write me a real critism, not "it's shit". Thanks.
