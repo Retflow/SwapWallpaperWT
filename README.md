@@ -1,4 +1,4 @@
-# SwapWallpaperWT
+# Swap Wallpaper in Windows Terminal 
 Simple Script for swapping wallpapers in Windows Terminal
 
 SETUP YOUR WINDOWS TERMINAL PROFILES.JSON CONFIG:
@@ -13,4 +13,11 @@ I just want to share my idea with you.
 
 Have fun with it!
   
+HOW TO USE IT:
+  just copy this file to /usr/local/bin
+  then exeute cwp.
+  
+  cwp swap <img> will change your wallpaper
+  cwp list will list all your images in your path
+  cwp -h will show the help page
   
