@@ -1,7 +1,7 @@
 # Swap Wallpaper in Windows Terminal 
 Simple Script for swapping wallpapers in Windows Terminal
 
-SETUP YOUR WINDOWS TERMINAL PROFILES.JSON CONFIG:
+**SETUP YOUR WINDOWS TERMINAL PROFILES.JSON CONFIG:**  
 change "backgroundImage" to /path/to/your/pictures/1.jpg
    
 Why 1.jpg? It's because this script copy your Image to 1.jpg
@@ -13,9 +13,9 @@ I just want to share my idea with you.
 
 Have fun with it!
   
-HOW TO USE IT:
-  copy cwp.py to /usr/local/bin
-  USAGE:
+**HOW TO USE IT:**  
+  copy cwp.py to /usr/local/bin  
+  USAGE:  
   cwp swap <img> will change your wallpaper
   cwp list will list all your images in your path
   cwp -h will show the help page
