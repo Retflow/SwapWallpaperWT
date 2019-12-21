@@ -21,11 +21,11 @@ Have fun with it!
   copy cwp.py to /usr/local/bin    
   USAGE:  
   cwp swap <img>  
-    will change your wallpaper  
+  &nbsp;&nbsp;will change your wallpaper  
   cwp list  
-    will list all your images in your path    
+  &nbsp;&nbsp;will list all your images in your path    
   cwp -h  
-    will show the help page  
+  &nbsp;&nbsp;will show the help page  
   
   just write the name without extension  
   e.g. if you have wallpaper.png  
