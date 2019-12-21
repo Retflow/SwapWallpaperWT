@@ -3,7 +3,7 @@ Simple Script for swapping wallpapers in Windows Terminal
 Working only with WSL
 
 **SETUP YOUR WINDOWS TERMINAL PROFILES.JSON CONFIG:**  
-change "backgroundImage" to /path/to/your/pictures/1.jpg
+change "backgroundImage" to /path/to/your/pictures/1.jpg  
 also you might to do this export PATH=$PATH:/mnt/c/Windows/System32
    
 Why 1.jpg? It's because this script copy your Image to 1.jpg
