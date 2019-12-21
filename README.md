@@ -43,8 +43,8 @@ I'm 19 years old
 Still a student  
 I write only in C and C++  
 Python is new to me  
-I love to share all my ideas with the world,  
-In the future I'll public my tools written in C and C++  
+I love to share all my ideas with the world
+  
 
 
 
