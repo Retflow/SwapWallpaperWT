@@ -6,6 +6,7 @@
 #CHANGE PATH VARIABLE
 #CHANGE PATHTOIMAGE VARIABLE
 #CHANGE WindowsTerminalID VARIABLE
+#CHANGE BACKGROUNDLINE
 
 
 #!IMPORTANT!
@@ -25,9 +26,13 @@ import signal
 # In the future I'm going to create an easy setup for paths. But for now use this. 
 # I think you're familiar with Linux, so this should't be hard.
 
+#The Variable BackgroundLine should be the number line that is in you're profiles.json, where "backgroundImage": <...> is found.
+
+
 path = ""
 pathToImage = ""
 WindowsTerminalID = ""
+backgroundLine = 
 
 def NoArgument():
     print("USAGE: cwp <arg> <...>\nHelp: -h")
@@ -52,7 +57,7 @@ def swap():
     #.* to change what ever extension it is to jpg. 
     if  os.path.exists("%s%s"%(path,sys.argv[2])):
         pathCompletion = pathToImage+sys.argv[2]+"\""+","
-        os.system("sed -i '37s/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(pathCompletion,WindowsTerminalID))
+        os.system("sed -i '%ds/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(backgroundLine,pathCompletion,WindowsTerminalID))
     else:
         print("%s do not exists"%sys.argv[2])
 
