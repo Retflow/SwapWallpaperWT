@@ -60,7 +60,7 @@ def swap():
         #This way, it isn't neccessary to open the profiles.json
         #Warning! Only one can exist. It searches for one numberline, 
         #if you have to backgroundImage variables set, the closer
-        #will be only overwritten. 
+        #will only be overwritten. 
         backgroundLine = os.popen("cat /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json | grep -n -m 1 backgroundImage | cut -f1 -d:"%WindowsTerminalID).read().split('\n')
         os.system("sed -i '%ds/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(int(backgroundLine[0]),pathCompletion,WindowsTerminalID))
     else:
