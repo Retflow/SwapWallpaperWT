@@ -17,7 +17,7 @@ Have fun with it!
 
   
 **HOW TO USE IT:**  
-  3 Variables have to be set.  
+  4 Variables have to be set.  
   Do not worry, I explained those in the Source code.  
   sudo chmod +x cwp.py  
   copy cwp.py to /usr/local/bin    
