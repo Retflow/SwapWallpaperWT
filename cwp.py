@@ -47,7 +47,7 @@ def listWallpaper():
 
     #lists all files in path. 
     for name in files:
-        if name.endswith('.jpg') or name.endswith('.png'):
+        if name.endswith('.jpg') or name.endswith('.png') or name.endswith('.gif'):
         #    showWithoutExtension = ('').join(name.split('.')[0])
         #    print(showWithoutExtension)
             print(name)
