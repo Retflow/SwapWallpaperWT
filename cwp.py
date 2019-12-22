@@ -9,7 +9,7 @@
 
 
 #!IMPORTANT!
-# In Line 47: Change Microsoft Package Identification 
+# Windows Terminal ID are unique. 
 # E.g: Microsoft.WindowsTerminal_7Hj8dn290kd
 # This ID can be found here: C:/Users/<USERNAME>/AppData/Local/Packages/Microsoft.WindowsTerminal_<ID>
 # Set WindowsTerminalID = <ID>
@@ -22,6 +22,8 @@ import signal
 #PATH TO YOUR PICTURE LIBLARY 
 # E.g: path = "/mnt/c/Users/<USERNAME>/Pictures/linux/"
 # E.g: pathToImage = "\"backgroundImage\": \"C:\\/Users\\/<USERNAME>\\/Pictures\\/linux\\/"
+# In the future I'm going to create an easy setup for paths. But for now use this. 
+# I think you're familiar with Linux, so this should't be hard.
 
 path = ""
 pathToImage = ""
