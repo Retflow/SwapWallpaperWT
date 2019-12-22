@@ -8,12 +8,16 @@
 #CHANGE WindowsTerminalID VARIABLE
 
 
-
 #!IMPORTANT!
 # Windows Terminal ID are unique. 
 # E.g: Microsoft.WindowsTerminal_7Hj8dn290kd
 # This ID can be found here: C:/Users/<USERNAME>/AppData/Local/Packages/Microsoft.WindowsTerminal_<ID>
 # Set WindowsTerminalID = <ID>
+
+#USAGE:
+#cwp list       - show compatible files 
+#cwp swap <arg> - change wallpaper E.g: cwp swap mygif.gif, cwp swap mypng.png, cwp myjpg.jpg
+#cwp -h         - show help
 
 import os
 import sys
