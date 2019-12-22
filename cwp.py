@@ -55,9 +55,9 @@ import subprocess
 # I think you're familiar with Linux, so this should't be hard.
 
 
-path = "/mnt/c/Users/Jakub/Pictures/linux/"
-pathToImage = "\"backgroundImage\": \"C:\\/Users\\/Jakub\\/Pictures\\/linux\\/"
-WindowsTerminalID = "8wekyb3d8bbwe"
+path = ""
+pathToImage = ""
+WindowsTerminalID = ""
 
 def NoArgument():
     print("USAGE: cwp <arg> <...>\nHelp: -h")
