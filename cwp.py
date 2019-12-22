@@ -56,10 +56,11 @@ def swap():
     #.* to change what ever extension it is to jpg. 
     if  os.path.exists("%s%s"%(path,sys.argv[2])):
         pathCompletion = pathToImage+sys.argv[2]+"\""+","
-        #res = check_output(split("sed -n '/backgroundImage/=' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%WindowsTerminalID))
-        #input = subprocess.run(['cat', '/mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json'%WindowsTerminalID], stdout=subprocess.PIPE)
-        #result = subprocess.run(grep, stdout=subprocess.PIPE, input=input)
-        #result.stdout.decode('utf-8')
+        #Looks for backgroundImage string in config, and then save the numberline
+        #This way, it isn't neccessary to open the profiles.json
+        #Warning! Only one can exist. It searches for one numberline, 
+        #if you have to backgroundImage variables set, the closer
+        #will be only overwritten. 
         backgroundLine = os.popen("cat /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json | grep -n -m 1 backgroundImage | cut -f1 -d:"%WindowsTerminalID).read().split('\n')
         os.system("sed -i '%ds/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(int(backgroundLine[0]),pathCompletion,WindowsTerminalID))
     else:
