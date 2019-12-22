@@ -30,7 +30,7 @@ Have fun with it!
   &nbsp;&nbsp;will show the help page  
   Example:  
   cwp swap wallpaper.jpg  
-  **Important**
+  **Important**  
   This script search for backgoroundImage string 
   in your profiles.json and overwrites it with  
   the new wallpaper. Do not have more than one  
