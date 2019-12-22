@@ -5,12 +5,14 @@
 #SETUP
 #CHANGE PATH VARIABLE
 #CHANGE PATHTOIMAGE VARIABLE
+#CHANGE WindowsTerminalID VARIABLE
+
 
 #!IMPORTANT!
 # In Line 47: Change Microsoft Package Identification 
 # E.g: Microsoft.WindowsTerminal_7Hj8dn290kd
 # This ID can be found here: C:/Users/<USERNAME>/AppData/Local/Packages/Microsoft.WindowsTerminal_<ID>
-# Just set the WindowsTerminalID Variable
+# Set WindowsTerminalID = <ID>
 
 import os
 import sys
