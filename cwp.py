@@ -27,7 +27,7 @@ import signal
 # I think you're familiar with Linux, so this should't be hard.
 
 #The Variable BackgroundLine should be the number line that is in you're profiles.json, where "backgroundImage": <...> is found.
-
+# E.g: backgroundLine = 37
 
 path = ""
 pathToImage = ""
