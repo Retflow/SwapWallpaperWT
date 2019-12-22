@@ -2,32 +2,11 @@
 #Change Wallpaper(CWP) is a small script to change the wallpaper
 #in Windows Terminal
 
-#LICENSE
-
-#Copyright (C) 2019 by Retflow
-#
-#Permission is hereby granted, free of charge, to any person obtaining a copy
-#of this software and associated documentation files (the "Software"), to deal
-#in the Software without restriction, including without limitation the rights
-#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-#copies of the Software, and to permit persons to whom the Software is
-#furnished to do so, subject to the following conditions:
-#
-#The above copyright notice and this permission notice shall be included in
-#all copies or substantial portions of the Software.
-#
-#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-#THE SOFTWARE.
-
 #SETUP
 #CHANGE PATH VARIABLE
 #CHANGE PATHTOIMAGE VARIABLE
 #CHANGE WindowsTerminalID VARIABLE
+#CHANGE user VARIABLE
 
 
 #!IMPORTANT!
@@ -35,11 +14,6 @@
 # E.g: Microsoft.WindowsTerminal_7Hj8dn290kd
 # This ID can be found here: C:/Users/<USERNAME>/AppData/Local/Packages/Microsoft.WindowsTerminal_<ID>
 # Set WindowsTerminalID = <ID>
-
-#USAGE:
-#cwp list       - show compatible files 
-#cwp swap <arg> - change wallpaper E.g: cwp swap mygif.gif, cwp swap mypng.png, cwp myjpg.jpg
-#cwp -h         - show help
 
 import os
 import sys
@@ -54,10 +28,12 @@ import subprocess
 # In the future I'm going to create an easy setup for paths. But for now use this. 
 # I think you're familiar with Linux, so this should't be hard.
 
+#set user variable to your windows user name. C:\Users\<user>
 
 path = ""
 pathToImage = ""
 WindowsTerminalID = ""
+user = ""
 
 def NoArgument():
     print("USAGE: cwp <arg> <...>\nHelp: -h")
@@ -87,8 +63,8 @@ def swap():
         #Warning! Only one can exist. It searches for one numberline, 
         #if you have to backgroundImage variables set, the closer
         #will only be overwritten. 
-        backgroundLine = os.popen("cat /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json | grep -n -m 1 backgroundImage | cut -f1 -d:"%WindowsTerminalID).read().split('\n')
-        os.system("sed -i '%ds/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(int(backgroundLine[0]),pathCompletion,WindowsTerminalID))
+        backgroundLine = os.popen("cat /mnt/c/Users/%s/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json | grep -n -m 1 backgroundImage | cut -f1 -d:"%(user,WindowsTerminalID)).read().split('\n')
+        os.system("sed -i '%ds/.*/%s/' /mnt/c/Users/%s/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(int(backgroundLine[0]),pathCompletion,user,WindowsTerminalID))
     else:
         print("%s do not exists"%sys.argv[2])
 
@@ -110,4 +86,3 @@ def main():
             showHelp()
 
 main()
-
