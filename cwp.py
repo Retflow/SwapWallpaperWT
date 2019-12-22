@@ -19,6 +19,8 @@ import os
 import sys
 import time
 import signal
+import subprocess
+
 
 #PATH TO YOUR PICTURE LIBLARY 
 # E.g: path = "/mnt/c/Users/<USERNAME>/Pictures/linux/"
@@ -26,13 +28,10 @@ import signal
 # In the future I'm going to create an easy setup for paths. But for now use this. 
 # I think you're familiar with Linux, so this should't be hard.
 
-#The Variable BackgroundLine should be the number line that is in you're profiles.json, where "backgroundImage": <...> is found.
-# E.g: backgroundLine = 37
 
-path = ""
-pathToImage = ""
-WindowsTerminalID = ""
-backgroundLine = 
+path = "/mnt/c/Users/Jakub/Pictures/linux/"
+pathToImage = "\"backgroundImage\": \"C:\\/Users\\/Jakub\\/Pictures\\/linux\\/"
+WindowsTerminalID = "8wekyb3d8bbwe"
 
 def NoArgument():
     print("USAGE: cwp <arg> <...>\nHelp: -h")
@@ -57,7 +56,12 @@ def swap():
     #.* to change what ever extension it is to jpg. 
     if  os.path.exists("%s%s"%(path,sys.argv[2])):
         pathCompletion = pathToImage+sys.argv[2]+"\""+","
-        os.system("sed -i '%ds/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(backgroundLine,pathCompletion,WindowsTerminalID))
+        #res = check_output(split("sed -n '/backgroundImage/=' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%WindowsTerminalID))
+        #input = subprocess.run(['cat', '/mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json'%WindowsTerminalID], stdout=subprocess.PIPE)
+        #result = subprocess.run(grep, stdout=subprocess.PIPE, input=input)
+        #result.stdout.decode('utf-8')
+        backgroundLine = os.popen("cat /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json | grep -n -m 1 backgroundImage | cut -f1 -d:"%WindowsTerminalID).read().split('\n')
+        os.system("sed -i '%ds/.*/%s/' /mnt/c/Users/Jakub/AppData/Local/Packages/Microsoft.WindowsTerminal_%s/LocalState/profiles.json"%(int(backgroundLine[0]),pathCompletion,WindowsTerminalID))
     else:
         print("%s do not exists"%sys.argv[2])
 
