@@ -2,12 +2,10 @@
 Simple Script for swapping wallpapers in Windows Terminal
 Working only with WSL
 
-**IMPROVEMENTS IN 2020**  
-- case-sensitive comparison
-- auto-completion
-- easy path setup
-- config file
-  - with path to image directory
+**NO FURTHER IMPROVEMENTS**  
+This little script do not get improved in the future.  
+
+
   
 **Dependencies**  
 export PATH=$PATH:/mnt/c/Windows/System32
