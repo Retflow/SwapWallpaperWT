@@ -43,15 +43,6 @@ I'm active on Reddit(u/Qyez) just write me a message.
 For those who do not like my script. You can also write me a message,  
 but stay decent and write me a real critism, not "it's shit". Thanks.
 
-**About me**  
-I'm 19 years old  
-Still a student  
-I write only in C and C++  
-Python is new to me  
-I love to share all my ideas with the world
-  
-
-
 
   ***Thanks to***  
 case_O_The_Mondays
