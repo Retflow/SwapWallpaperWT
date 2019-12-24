@@ -3,7 +3,8 @@ Simple Script for swapping wallpapers in Windows Terminal
 Working only with WSL
 
 **NO FURTHER IMPROVEMENTS**  
-This little script do not get improved in the future.  
+I do not plan to improve this script in the future. 
+
 
 
   
