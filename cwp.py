@@ -77,7 +77,6 @@ def listWallpaper():
             print(name)
 def swap():
     #change Image Name to current. Where current is the backgoround Image Setting in Windows Terminal
-    #.* to change what ever extension it is to jpg. 
     if  os.path.exists("%s%s"%(path,sys.argv[2])):
         pathCompletion = pathToImage+sys.argv[2]+"\""+","
         #Looks for backgroundImage string in config, and then save the numberline
