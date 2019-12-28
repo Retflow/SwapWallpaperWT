@@ -50,7 +50,7 @@ import subprocess
 # In the future I'm going to create an easy setup for paths. But for now use this. 
 # I think you're familiar with Linux, so this should't be hard.
 
-#set user variable to your windows user name. C:\Users\<user>
+#set user variable to your windows user name. C:\Users\<user> | user = "<user>"
 
 path = ""
 pathToImage = ""
