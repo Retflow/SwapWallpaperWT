@@ -39,8 +39,6 @@ Have fun with it!
 
 **For those who like to send me feedback**  
 I'm active on Reddit(u/Qyez) just write me a message.  
-For those who do not like my script. You can also write me a message,  
-but stay decent and write me a real critism, not "it's shit". Thanks.
 
 
   ***Thanks to***  
